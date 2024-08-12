@@ -5,10 +5,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = psycopg2.connect(host='dpg-cqocdklds78s73buesig-a.oregon-postgres.render.com',
-                            database='movies',
-                            user='db_soso_user',
-                            password='iQci0788ul4wY1rC1UY4ArvcEsca8pH8')
+    conn = psycopg2.connect(host='pg-362da2a-wowk.f.aivencloud.com',
+                            database='defaultdb',
+                            user='avnadmin',
+                            password='AVNS_PiPCdU87ySKStvr7N8q')
     return conn
 
 
@@ -41,7 +41,7 @@ def index():
             </li>
         """ % (movie['rating'], movie['name'])
        
-    return open(r'C:\Users\sofiadomingues-ieg\OneDrive - Instituto Germinare\2024\DevOps\Exercicio05.08\webapp\index.html').read()  % (html)
+    return open('index.html').read()  % (html)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
