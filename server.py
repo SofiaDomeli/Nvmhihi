@@ -5,7 +5,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = psycopg2.connect(host='pg-362da2a-wowk.f.aivencloud.com',
+    conn = psycopg2.connect(host='pg-362da2a-wowk.f.aivencloud.com:20461',
                             database='defaultdb',
                             user='avnadmin',
                             password='AVNS_PiPCdU87ySKStvr7N8q')
