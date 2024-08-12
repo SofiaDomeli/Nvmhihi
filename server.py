@@ -41,7 +41,7 @@ def index():
             </li>
         """ % (movie['rating'], movie['name'])
        
-    return open('index.html').read()  % (html)
+    return open('./index.html').read()  % (html)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
